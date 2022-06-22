@@ -22,7 +22,7 @@ public class PlayerAtack : MonoBehaviour
         Attack();
     }
 
-    void Attack()
+    void Attack()//主角的攻击
     {
         if (Input.GetButtonDown("Attack"))
         {
@@ -32,16 +32,16 @@ public class PlayerAtack : MonoBehaviour
         }
     }
 
-    IEnumerator StartAttack()
+    IEnumerator StartAttack()//攻击开始
     { 
-        yield return new WaitForSeconds(Starttime);
-        coll2D.enabled = true;
-        StartCoroutine(disableHitBox());
+        yield return new WaitForSeconds(Starttime);//
+        coll2D.enabled = true;//显示攻击表格框
+        StartCoroutine(disableHitBox());//调用协程
     }
 
     IEnumerator disableHitBox()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time);//实现等待time的时间，执行coll2D.enabled=false;
         coll2D.enabled=false;
     }
 
