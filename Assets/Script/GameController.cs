@@ -6,4 +6,6 @@ public class GameController : MonoBehaviour
 {
     //只存放一些静态变量
     public static CameraShake camShake;
+    public static bool IsGameAlive = true;
+
 }

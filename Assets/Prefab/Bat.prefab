@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 2613921658347262266}
   - component: {fileID: 2613921658347262270}
   - component: {fileID: 2613921658347262267}
-  m_Layer: 0
+  - component: {fileID: 4561881156218758164}
+  m_Layer: 10
   m_Name: EnemyBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -100,8 +101,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1105669557
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 8647823593821616703, guid: a94670a5e4b5b5443ad090803c042f6e,
     type: 3}
@@ -130,6 +131,10 @@ MonoBehaviour:
   damage: 2
   health: 5
   flashTime: 0.5
+  dropCoin: {fileID: 2417106028247297727, guid: b5e90edd1f91b9b4cb61672eec199e5a,
+    type: 3}
+  FontPoint: {fileID: 8778552501770712150, guid: 04b981575b3c8074a8aacb5f0b55b5af,
+    type: 3}
   BloodEffect: {fileID: 1754954274675023730, guid: 6bf06f426d5471a48a687fe5a2e92b37,
     type: 3}
   BatSpeed: 2
@@ -182,6 +187,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5049443, y: 0.44751835}
   m_EdgeRadius: 0
+--- !u!50 &4561881156218758164
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613921658347262271}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &2613921658642389787
 GameObject:
   m_ObjectHideFlags: 0

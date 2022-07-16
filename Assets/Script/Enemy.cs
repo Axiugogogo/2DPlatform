@@ -7,6 +7,8 @@ public abstract class Enemy : MonoBehaviour//定义为敌人抽象类,这是一�
     public int damage;
     public int health;//血量、伤害
     public float flashTime;
+    public GameObject dropCoin;
+    public GameObject FontPoint;//显示伤害
 
     private SpriteRenderer sr;
     private Color OriginalColor;//记录原始Color
@@ -28,12 +30,16 @@ public abstract class Enemy : MonoBehaviour//定义为敌人抽象类,这是一�
     {
         if (health <= 0)
         {
+            Instantiate(dropCoin, transform.position,Quaternion.identity);//
             Destroy(gameObject);
         }
     }
 
     public void TakeDamage(int damage)
     {
+        
+        GameObject gb = Instantiate(FontPoint, transform.position, Quaternion.identity) as GameObject;
+        gb.transform.GetChild(0).GetComponent<TextMesh>().text = damage.ToString();//把伤害值赋过去
         health -= damage;
         FlashColor(flashTime);
         Instantiate(BloodEffect, transform.position, Quaternion.identity);//
